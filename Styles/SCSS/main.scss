@@ -10,66 +10,115 @@
 }
 body {
   @extend %centeritems;
-  height: 100vh;
-  width: 100vw;
+  //height: 100vh;
+  //width: 100vw;
+  flex-direction: column;
   border: 1px solid red;
   margin: 0;
-  .mainWrapper {
-    @extend %centeritems;
-    position: relative;
-    height: 300px;
-    width: 600px;
-    border: 1px solid blue;
-    overflow: hidden;
-    transition: all 3s ease;
-    .wrapper {
-      // @extend %centeritems;
+
+  //My sliders
+  .slider1 {
+    margin-top: 30px;
+    .mainWrapper {
+      @extend %centeritems;
       position: relative;
       height: 300px;
-      width: 100%;
-      // border: 1px solid black;
-      font-size: 0;
-      white-space: nowrap;
-      // right: calc(100%/3);
-      transition: all 1s ease;
-      // animation: test 0.5s infinite;
-      // @keyframes test {
-      //   from {right: 0};
-      //   to {right: calc(100%/3)}
-      // }
+      width: 600px;
+      border: 1px solid blue;
+      overflow: hidden;
+      transition: all 3s ease;
 
-      .card {
-        // position: absolute;
-        display: inline-block;
-        margin: 0;
-        height: 100%;
-        width: 200px;
-        border: 1px solid red;
-        outline: none;
-        font-size: 16px;
-        text-align: center;
-        padding: 100px 0 0 0;
-        transition: all 0.5s ease;
-        z-index: 1000;
+      .wrapper {
+        // @extend %centeritems;
+        position: relative;
+        height: 300px;
+        width: 100%;
+        // border: 1px solid black;
+        font-size: 0;
+        white-space: nowrap;
+        // right: calc(100%/3);
+        transition: all 1s ease;
+        // animation: test 0.5s infinite;
+        // @keyframes test {
+        //   from {right: 0};
+        //   to {right: calc(100%/3)}
+        // }
+
+        .card {
+          // position: absolute;
+          display: inline-block;
+          margin: 0;
+          height: 100%;
+          width: 200px;
+          border: 1px solid red;
+          outline: none;
+          font-size: 16px;
+          text-align: center;
+          padding: 100px 0 0 0;
+          transition: all 0.5s ease;
+          z-index: 1000;
+
+        }
 
       }
 
-    }
-    .controls {
-      position: absolute;
-      font-size: 16px;
-      border: 1px dotted red;
-      cursor: pointer;
-    }
+      .controls {
+        position: absolute;
+        font-size: 16px;
+        border: 1px dotted red;
+        cursor: pointer;
+      }
 
-    .controlsLeft {
-      top: 50%;
-      left: 3%;
-    }
+      .controlsLeft {
+        top: 50%;
+        left: 3%;
+      }
 
-    .controlsRight {
-      top: 50%;
-      right: 3%;
+      .controlsRight {
+        top: 50%;
+        right: 3%;
+      }
     }
   }
+
+
+  //My animations
+  .cardAnimation1 {
+    margin-top: 30px;
+    .wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      height: 200px;
+      border: 1px solid black;
+      .card {
+        border: 1px solid red;
+        height: 100%;
+        flex-grow: 1;
+        transition: all 0.15s ease-out;
+        &:hover {
+          flex-grow: 2;
+          background-color: #ccc;
+        }
+      }
+
+      // .test {
+      //   position: relative;
+      //   top: 300px;
+      //   &:hover{
+      //     top: 0px;
+      //   }
+      //   animation: test 1s infinite;
+      //   @keyframes test {
+      //     from {top: 300px;}
+      //     to {top: 0px;}
+      //   }
+      // }
+    }
+  }
+
 }
+
+
